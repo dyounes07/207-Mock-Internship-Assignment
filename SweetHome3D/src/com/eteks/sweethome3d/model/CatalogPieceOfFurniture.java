@@ -546,6 +546,7 @@ public class CatalogPieceOfFurniture implements Comparable<CatalogPieceOfFurnitu
     return this.name;
   }
 
+
   /**
    * Returns the description of this piece of furniture.
    * The returned value may be <code>null</code>.
@@ -599,6 +600,13 @@ public class CatalogPieceOfFurniture implements Comparable<CatalogPieceOfFurnitu
    */
   public float getHeight() {
     return this.height;
+  }
+
+  /**
+   * Returns the volume calculated from the furniture dimensions.
+   */
+  public float getVolume() {
+    return getWidth() * getDepth() * getHeight();
   }
 
   /**
